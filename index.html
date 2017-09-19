@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <title>MCN timeline</title>
     <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <link rel="stylesheet" href="tl-styles.css">
     <script src="timeline.local.js"></script>
 </head>
-<body>
+<body id="mcn-timeline">
 
 
 
@@ -20,8 +21,13 @@
     // and the element must have CSS styling to give it width and height
     // optionally, a third argument with configuration options can be passed.
     // See below for more about options.
+
+    var options = {
+        timenav_height_percentage: 50,
+        scale_factor: 8
+    };
     timeline = new TL.Timeline('timeline-embed',
-            'https://docs.google.com/spreadsheets/d/14Jez6kxGLUt05Hksa07k29TfR6tJ9cR764rIOOnaj98/pubhtml');
+            'https://docs.google.com/spreadsheets/d/14Jez6kxGLUt05Hksa07k29TfR6tJ9cR764rIOOnaj98/pubhtml', options);
 </script>
 
 </body>

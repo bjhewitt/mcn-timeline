@@ -12122,7 +12122,6 @@ TL.TimeGroup = TL.Class.extend({
             rows: 1
         };
 
-
         this._el.container = TL.Dom.create("div", "tl-timegroup");
 
         // Merge Data
@@ -12157,7 +12156,9 @@ TL.TimeGroup = TL.Class.extend({
     },
 
     setAlternateRowColor: function(alternate, hide) {
-        var class_name = "tl-timegroup";
+        var timegroupLabelArr = this.data.label.split(" ");
+        var timegroupLabelStr = timegroupLabelArr.join('');
+        var class_name = "tl-timegroup tl-timegroup--" + timegroupLabelStr;
         if (alternate) {
             class_name += " tl-timegroup-alternate";
         }
